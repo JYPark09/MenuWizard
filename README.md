@@ -1,2 +1,3 @@
 # MenuWizard
-Menu wizard for Hanyang Univ. CSE
+MenuWizard helps to choose lunch or dinner menu for Hanyang Univ. CSE  
+
