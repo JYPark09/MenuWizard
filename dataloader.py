@@ -1,3 +1,6 @@
+import torch
+from torch.utils.data import TensorDataset
+
 def load_labels():
     labels = []
 
@@ -18,4 +21,7 @@ def load_data(filename):
             X.append(line[1:])
             Y.append(line[0])
 
-    return X, Y
+    X = torch.tensor(X).float().view(-1, 38)
+    Y = torch.tensor(Y).long()
+
+    return TensorDataset(X, Y)
