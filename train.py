@@ -3,9 +3,9 @@ from torch import nn, optim
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
 
-from dataloader import load_data, load_labels
+from backend.dataloader import load_data, load_labels
 
-from network import Network
+from backend.network import Network
 
 LEARNING_RATE = 1e-3
 EPOCHS = 100

@@ -1,7 +1,7 @@
 import torch
 
-from network import Network
-from dataloader import load_labels, normalize
+from backend.network import Network
+from backend.dataloader import load_labels, normalize
 
 def main():
     net = Network()
