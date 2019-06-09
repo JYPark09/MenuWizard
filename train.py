@@ -13,8 +13,16 @@ EPOCHS = 100
 USE_CUDA = False
 
 def main():
-    train_data = load_data('./data/train.csv')
+    train_data, temp_mean, temp_var, time_mean, time_var = load_data('./data/train.csv')
     train_loader = DataLoader(train_data, batch_size=16, shuffle=True)
+
+    print('Temperature mean: %f' % temp_mean)
+    print('Tempature var: %f' % temp_var)
+    print('Time mean: %f' % time_mean)
+    print('Time var: %f' % time_var)
+
+    with open('weights/normalize.csv', 'w') as f:
+        f.write('%f\n%f\n%f\n%f' % (temp_mean, temp_var, time_mean, time_var))
 
     net = Network()
 
