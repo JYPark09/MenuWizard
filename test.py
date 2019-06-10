@@ -13,7 +13,7 @@ def main():
         time_mean = float(f.readline())
         time_var = float(f.readline())
 
-    inputTensor = torch.tensor([0,1,29.0,1,4,0.6,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]).view(1, -1)
+    inputTensor = torch.tensor([0,1,26.0,0,0,0.9,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]).view(1, -1)
     normalize(inputTensor[0], temp_mean,temp_var, time_mean, time_var)
 
     pred = torch.exp(net(inputTensor))

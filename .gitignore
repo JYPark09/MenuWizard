@@ -331,3 +331,4 @@ ASALocalRun/
 
 data/train.csv
 weights/*
+/frontend/build/x86-Debug
